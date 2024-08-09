@@ -32,12 +32,10 @@ public class RegistrationConsumerService {
 
     private void process(List<ResultDTO> results) {
         if (results.isEmpty()) {
-            log.info("result size [{}]", 0);
             return;
         }
         UpdateIdDTO updateId = UpdateIdFileUtils.getUpdateId();
         TelegramHelper.sanitizeData(updateId, results);
-        log.info("result after sanitized size [{}]", results.size());
         results.forEach(obj -> {
            this.subProcess(updateId, obj);
         });
