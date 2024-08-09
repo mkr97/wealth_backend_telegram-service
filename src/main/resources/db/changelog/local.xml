@@ -1,0 +1,29 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+	<property name="env-path" value="db/script/local" />
+	<property name="common-path" value="db/script" />
+
+<!-- Block Common  -->
+	<changeSet id="COMMON_000001" author="MKR_97_105507082024">
+		<comment>Add table api_snapshot and update table province khan</comment>
+		<sqlFile path="${common-path}/COMMON_000001_create_tables_action_session_authcode.sql" />
+	</changeSet>
+	<changeSet id="COMMON_000002" author="MKR_97_105507082024">
+		<comment>Add table api_snapshot and update table province khan</comment>
+		<sqlFile path="${common-path}/COMMON_000002_create_tables_merchant_cashier_user.sql" />
+	</changeSet>
+<!--  Block Common  -->
+
+
+	<!--	-->
+<!--	<changeSet id="000001" author="">-->
+<!--        <comment>Update db permission</comment>-->
+<!--        <sqlFile path="${env-path}/000001_qa_permission.sql" />-->
+<!--    </changeSet>-->
+    
+</databaseChangeLog>

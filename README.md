@@ -1,1 +1,1 @@
-# wealth_backend_telegram-service
+# wealth_backend-telegram-pos
